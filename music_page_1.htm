@@ -15,9 +15,33 @@ o\:*         { behavior: url(#default#VML) }
 <![endif]--><!--[if gte mso 9]>
 <xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
 </xml><![endif]-->
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
 </head>
 
-<body bgcolor="#000000">
+<body bgcolor="#000000" onload="FP_preloadImgs(/*url*/'button3.jpg',/*url*/'button7.jpg')">
 
 <h6>&nbsp;</h6>
 <p align="center"><!--[if gte vml 1]><v:shapetype id="_x0000_t136"
@@ -67,39 +91,8 @@ src="music_page_1_files/image001.gif" alt=Music v:shapes="_x0000_s1033"><![endif
 src="music_page_1_files/image002.gif" alt="Coming soon..." v:shapes="_x0000_s1036"><![endif]></font></p>
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
-<p align="center"><!--[if gte vml 1]><v:shapetype
- id="_x0000_t66" coordsize="21600,21600" o:spt="66" adj="5400,5400" path="m@0,l@0@1,21600@1,21600@2@0@2@0,21600,,10800xe">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="val #0"/>
-  <v:f eqn="val #1"/>
-  <v:f eqn="sum 21600 0 #1"/>
-  <v:f eqn="prod #0 #1 10800"/>
-  <v:f eqn="sum #0 0 @3"/>
- </v:formulas>
- <v:path o:connecttype="custom" o:connectlocs="@0,0;0,10800;@0,21600;21600,10800"
-  o:connectangles="270,180,90,0" textboxrect="@4,@1,21600,@2"/>
- <v:handles>
-  <v:h position="#0,#1" xrange="0,21600" yrange="0,10800"/>
- </v:handles>
-</v:shapetype><v:shape id="_x0000_s1039" type="#_x0000_t66" alt="" style='position:absolute;
- left:387.75pt;top:467.25pt;width:110.25pt;height:61.5pt;z-index:-1'
- fillcolor="silver" strokecolor="blue" strokeweight="3pt">
- <v:textbox>
-<table cellspacing="0" cellpadding="0" width="100%" height="100%">
-	<tr>
-		<td align="center">Back</td>
-	</tr>
-</table>
-<table cellspacing="0" cellpadding="0" width="100%" height="100%">
-	<tr>
-		<td align="center"><a href="index.htm">CH42WSVL</a></td>
-	</tr>
-</table>
- </v:textbox>
-</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
-absolute;z-index:-1;left:512px;top:615px;width:158px;height:102px'><img
-width=158 height=102 src="music_page_1_files/image003.gif" v:shapes="_x0000_s1039"></span><![endif]></p>
+<p align="center"><a href="index.htm">
+<img border="0" id="img1" src="button2.jpg" height="38" width="190" alt="Home" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'button3.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'button2.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'button7.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'button3.jpg')" fp-style="fp-btn: Glass Capsule 5; fp-font-size: 16" fp-title="Home"></a></p>
 
 </body>
 
