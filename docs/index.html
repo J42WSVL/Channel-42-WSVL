@@ -19,6 +19,9 @@
     nav .placeholder-link { text-decoration: underline; }
     .about-link { margin: clamp(13rem, 28vh, 19rem) auto 0; }
     .about-link a { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; font-size: 1.9rem; }
+    .extras-link { margin: 33rem auto 7rem; }
+    .extras-link a { display: inline-grid; place-items: center; width: 44px; height: 44px; }
+    .extras-link a::before { content: ""; width: .8rem; height: .8rem; border: 2px solid currentColor; transform: rotate(45deg); }
   </style>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta property="og:type" content="website">
@@ -45,6 +48,7 @@
       </ul>
     </nav>
     <p class="about-link"><a href="about.htm" aria-label="About">?</a></p>
+    <p class="extras-link"><a href="extras.htm" aria-label="Extras"></a></p>
   </main>
 </body>
 </html>
