@@ -20,8 +20,9 @@
     .about-link { margin: clamp(13rem, 28vh, 19rem) auto 0; }
     .about-link a { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; font-size: 1.9rem; }
     .extras-link { margin: 33rem auto 7rem; }
-    .extras-link a { display: inline-grid; place-items: center; width: 44px; height: 44px; }
-    .extras-link a::before { content: ""; width: .8rem; height: .8rem; border: 2px solid currentColor; transform: rotate(45deg); }
+    .extras-link a { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; text-decoration: none; }
+    .extras-mark { display: inline-flex; align-items: center; gap: .35em; border-bottom: 2px solid currentColor; padding-bottom: .12em; font-size: 1.4rem; line-height: 1; }
+    .extras-diamond { width: .8rem; height: .8rem; border: 2px solid currentColor; transform: rotate(45deg); }
   </style>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta property="og:type" content="website">
@@ -48,7 +49,7 @@
       </ul>
     </nav>
     <p class="about-link"><a href="about.htm" aria-label="About">About</a></p>
-    <p class="extras-link"><a href="extras.htm" aria-label="Extras"></a></p>
+    <p class="extras-link"><a href="extras.htm" aria-label="Extras"><span class="extras-mark" aria-hidden="true">?<span class="extras-diamond"></span>?</span></a></p>
   </main>
 </body>
 </html>
